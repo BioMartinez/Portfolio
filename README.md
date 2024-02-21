@@ -1,7 +1,7 @@
 # Portfolio
 
-This portfolio contains the Generic Shop project documentation and the Library project's SQL code.
-To see the code of automatic tests with Playwright check my other repository: https://github.com/BioMartinez/Playwright
+This portfolio contains the Generic Shop project documentation.  
+To see the code of automatic tests with Playwright check my other repository: https://github.com/BioMartinez/Playwright  (Coming soon, currently the repository is private)
 
 ## Generic Shop Project
 
@@ -17,4 +17,4 @@ The URL of the tested page: https://skleptest.pl/
 
 ## SQL code
 
-In this repository is also a Library Project with MS SQL Server code. 
+There are also plans for a library project with MS SQL Server code in this repository.
