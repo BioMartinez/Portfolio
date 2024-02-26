@@ -1,7 +1,7 @@
 # Portfolio
 
 This portfolio contains the Generic Shop project documentation.  
-To see the code of automatic tests with Playwright check my other repository: https://github.com/BioMartinez/Playwright  (Coming soon, currently the repository is private)
+To see the code of automatic tests with Playwright check my other repository: https://github.com/BioMartinez/Playwright  
 
 ## Generic Shop Project
 
