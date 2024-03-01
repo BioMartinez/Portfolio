@@ -1,0 +1,41 @@
+CREATE DATABASE "Library";
+
+CREATE TABLE "Book" (
+id int NOT NULL PRIMARY KEY,
+title varchar(50) NOT NULL,
+author varchar(50) NOT NULL,
+ISBN char(13) NOT NULL,
+covertype varchar(50)
+);
+
+CREATE TABLE "Reader" (
+id int NOT NULL PRIMARY KEY,
+firstname varchar(50) NOT NULL,
+surname varchar(50) NOT NULL,
+email varchar(50),
+telephone varchar (50)
+);
+
+CREATE TABLE "Librarian" (
+id int NOT NULL PRIMARY KEY,
+firstname varchar(50) NOT NULL,
+surname varchar(50) NOT NULL
+);
+
+CREATE TABLE "Rent" (
+ID int NOT NULL PRIMARY KEY,
+BookID int FOREIGN KEY REFERENCES Book(ID),
+ReaderID int FOREIGN KEY REFERENCES Reader(ID),
+LibrarianID int FOREIGN KEY REFERENCES Librarian(ID),
+DateofRent datetime DEFAULT GETDATE(),
+DateofReturn datetime
+);
+
+CREATE TABLE "Category" (
+ID int PRIMARY KEY,
+namecategory varchar(50)
+);
+
+CREATE TABLE "BookCategory" (
+BookID int FOREIGN KEY REFERENCES Book(ID),
+CategoryID int FOREIGN KEY REFERENCES Category(ID)
