@@ -1,4 +1,4 @@
-# A stored procedure that adds a new reader:
+## 1. A stored procedure that adds a new reader:
 
 ```
   CREATE PROCEDURE AddNewReader
@@ -14,7 +14,7 @@ BEGIN
 END
 ```
 
-# A stored procedure that adds a new rent of book and adds a new reader if it does not exist
+## 2. A stored procedure that adds a new rent of book and adds a new reader if it does not exist
 
 ```
 CREATE PROCEDURE AddNewRent
@@ -46,7 +46,7 @@ BEGIN
 END
 ```
 
-# A stored procedure that adds the return of the book
+## 3. A stored procedure that adds the return of the book
 
 ```
 CREATE PROCEDURE AddReturnOfBook
