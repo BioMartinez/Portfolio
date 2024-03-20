@@ -1,3 +1,4 @@
+```
 CREATE DATABASE Library;
 
 CREATE TABLE Book (
@@ -117,3 +118,5 @@ INSERT INTO BookCategory (BookID, CategoryID) VALUES
 (8, 7),
 (9, 10),
 (10, 4);
+
+```
