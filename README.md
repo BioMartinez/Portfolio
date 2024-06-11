@@ -24,7 +24,8 @@ The URL of the tested page: https://skleptest.pl/
 
 This repository also has a Library Project with MS SQL schema with data.  
 You can find here two files:  
-- `Library project Database` - SQL code of creating database and tables, inserting some data and creating a view  
+- `Library project Database` - SQL code of creating database and tables, inserting some data and creating a view
+- `Query examples` - Examples of queries that can extract specific data from the database 
 - `Stored procedures` - SQL code that can save on a database and be reused whenever you need (e.g. frequently executed scripts)
  
 The UML diagram of this project is as follows:  
