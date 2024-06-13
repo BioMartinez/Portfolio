@@ -84,15 +84,15 @@ INSERT INTO Reader (FirstName, Surname, PESEL, Email, Telephone) VALUES
 ('Omar', 'Delgado', '99020991991', 'laoreet.posuere@aol.com', '769-5398');
 
 INSERT INTO Rent (BookID, ReaderID, LibrarianID, DateofRent, DateofReturn) VALUES 
-(1, 10, 2, GETDATE(), NULL),
-(8, 9, 2, GETDATE(), '2024-01-10T16:50:12.137'),
-(2, 2, 2, GETDATE(), NULL),
-(5, 2, 2, GETDATE(), NULL),
-(4, 4, 1, GETDATE(), NULL),
-(3, 3, 2, GETDATE(), NULL),
-(6, 7, 2, GETDATE(), NULL),
-(9, 6, 2, GETDATE(), NULL),
-(7, 1, 1, GETDATE(), NULL),
+(1, 10, 2, '2024-01-12T11:33:11', NULL),
+(8, 9, 2, '2024-01-03T10:04:22', '2024-01-10T16:50:12.137'),
+(2, 2, 2, '2023-12-29T09:55:59', NULL),
+(5, 2, 2, '2023-10-08T13:00:03', '2024-03-07T14:37:05.260'),
+(4, 4, 1, '2023-10-08T13:50:21', NULL),
+(3, 3, 2, '2024-02-17T12:45:06', NULL),
+(6, 7, 2, '2024-02-19T15:03:54', NULL),
+(9, 6, 2, '2024-03-02T14:13:09', NULL),
+(7, 1, 1, '2023-12-01T08:37:48', NULL),
 (10, 12, 1, GETDATE(), NULL);
 
 INSERT INTO Category (NameCategory) VALUES
