@@ -26,22 +26,34 @@ WHERE	  CASE WHEN SUBSTRING(PESEL, 3, 1) IN ('2', '3')
 ## 3. How many books are currently on loan?
 
 ```
-SELECT COUNT(*) AS HowMuchBookIsRentNow FROM Rent
+SELECT COUNT(*) AS HowMuchBookIsRentNow
+FROM Rent
 WHERE DateofReturn IS NULL
 ```
 
-## 4. In which category were the most books borrowed?
+## 4. What book titles were borrowed in March?
+
+```
+SELECT b.Title
+FROM Rent r
+	INNER JOIN Book b
+		ON b.ID = r.BookID
+WHERE MONTH(r.DateofRent) = 3
+```
+
+## 5. In which category were the most books borrowed?
 
 ```
 SELECT TOP 1 x.NameCategory, COUNT(*) as HowMany
 FROM
-(SELECT c.NameCategory FROM Rent r
-INNER JOIN Book b
-ON b.ID = r.BookID
-INNER JOIN BookCategory bc
-ON b.ID = bc.BookID
-INNER JOIN Category c
-ON c.ID = bc.CategoryID) x
+	(SELECT c.NameCategory
+	FROM Rent r
+		INNER JOIN Book b
+			ON b.ID = r.BookID
+		INNER JOIN BookCategory bc
+			ON b.ID = bc.BookID
+		INNER JOIN Category c
+			ON c.ID = bc.CategoryID) x
 GROUP BY x.NameCategory
 ORDER BY HowMany DESC
 ```
