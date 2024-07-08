@@ -57,3 +57,14 @@ FROM
 GROUP BY x.NameCategory
 ORDER BY HowMany DESC
 ```
+
+## 6. Which librarian borrowed the most books this year?
+
+```
+SELECT Top 1 l.FirstName + ' ' + l.Surname AS Librarian
+	FROM Librarian l
+		INNER JOIN Rent r
+			ON l.ID = r.LibrarianID
+	WHERE Year(r.DateofRent) = Year(GETDATE())
+	ORDER BY r.LibrarianID DESC
+```
