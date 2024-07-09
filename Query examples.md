@@ -68,3 +68,18 @@ SELECT Top 1 l.FirstName + ' ' + l.Surname AS Librarian
 	WHERE Year(r.DateofRent) = Year(GETDATE())
 	ORDER BY r.LibrarianID DESC
 ```
+
+## 7. How many books did a librarian named "Victor" borrow in the first quarter of this year depending on the month?  
+
+```
+SELECT COUNT(r.BookID) AS HowManyBooks,
+	MONTH(DateofRent) as InWhichMonth
+FROM Rent r
+	INNER JOIN Librarian l
+		ON l.ID = r.LibrarianID
+WHERE l.FirstName = 'Victor'
+	AND YEAR(DateofRent) = YEAR(GETDATE())
+GROUP BY MONTH(DateofRent)
+HAVING MONTH(DateofRent) IN (1,2,3)
+ORDER BY InWhichMonth
+```
