@@ -83,3 +83,17 @@ GROUP BY MONTH(DateofRent)
 HAVING MONTH(DateofRent) IN (1,2,3)
 ORDER BY InWhichMonth
 ```
+
+## 8. Which reader borrowed the most books during the summer months?  
+
+```
+SELECT (r.firstname + ' ' + r.surname) AS NameOfReader, x.HowMany
+FROM Reader r
+	INNER JOIN (
+		SELECT TOP 1 ReaderID, COUNT(BookID) AS HowMany
+		FROM Rent	
+		WHERE MONTH(DateofRent) IN (6,7,8)
+		GROUP BY ReaderID
+		ORDER BY HowMany DESC ) AS x
+	ON r.id = x.ReaderID
+```
